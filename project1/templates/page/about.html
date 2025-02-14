@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'portfolio.css' %}">
+    <title>About</title>
+</head>
+<body>
+  
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="{% url 'portfolio:index' %}">Home</a></li>
+                <li><a href="{% url 'portfolio:project' %}">Project</a></li>
+                <li><a href="{% url 'portfolio:about' %}">About</a></li>
+                <li><a href="{% url 'portfolio:contact' %}">contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+   
+    <main>
+        <h1>Hello, I'm Xydrin Fritz M. Mose</h1>
+        <form>
+            <img src="{% static 'xydrin.jpg' %}" alt="Xydrin Fritz M. Mose" class="img">
+        <p class="p">I am currently an IT student studying at Gordon College. </p>
+        </form>
+    </main>
+</body>
+</html>

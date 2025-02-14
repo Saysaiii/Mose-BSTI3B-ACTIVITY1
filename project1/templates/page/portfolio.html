@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'portfolio.css' %}">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="{% url 'portfolio:index' %}">Home</a></li>
+                <li><a href="{% url 'portfolio:project' %}">Projects</a></li>
+                <li><a href="{% url 'portfolio:about' %}">About</a></li>
+                <li><a href="{% url 'portfolio:contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <main>
+        <section id="home">
+            <h1>Welcome to My Portfolio</h1>
+           
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <img src="{% static 'project1.jpg' %}" alt="Project 1">
+                    <h3>Suspicious car</h3>
+                    <p>Body Guard Car.</p>
+                </div>
+                <div class="project-item">
+                    <img src="{% static 'project2.jpg' %}" alt="Project 2">
+                    <h3>Sad Car</h3>
+                    <p>A cat lost its pet.</p>
+                </div>
+                <div class="project-item">
+                    <img src="{% static 'project3.jpg' %}" alt="Project 3">
+                    <h3>Angry Car</h3>
+                    <p>cat starving</p>
+                </div>
+            </div>
+        </section>
+
+       
+
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

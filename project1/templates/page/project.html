@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'portfolio.css' %}">
+    <title>Portfolio</title>
+</head>
+<style>
+    .project {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0px;
+        border-radius: 10px;
+     
+    }
+    
+    .img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+    }
+    
+    .img:hover {
+        transform: scale(1.05);
+    }
+    </style>
+<body>
+  
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="{% url 'portfolio:index' %}">Home</a></li>
+                <li><a href="{% url 'portfolio:project' %}">Project</a></li>
+                <li><a href="{% url 'portfolio:about' %}">About</a></li>
+                <li><a href="{% url 'portfolio:contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    
+
+    <main>
+        <h1>This is my project</h1>
+        
+
+
+        <form class="project">
+            <img src="{% static 'project1.jpg' %}" alt="Project1" class="img">
+            <img src="{% static 'project2.jpg' %}" alt="Project2" class="img">
+            <img src="{% static 'project3.jpg' %}" alt="Project3" class="img">
+        </form>
+    </main>
+</body>
+</html>
